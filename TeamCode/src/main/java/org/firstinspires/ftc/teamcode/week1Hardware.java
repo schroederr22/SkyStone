@@ -10,6 +10,12 @@ public class week1Hardware {
     public DcMotor motorLeft;
     public DcMotor motorRight;
 
+    ColorSensor sensorColor = null;
+
+    Rev2mDistanceSensor distSensor = null;
+
+
+
 
     // Define hardware map
     HardwareMap hwMap;
@@ -20,7 +26,7 @@ public class week1Hardware {
         hwMap = ahwMap;
 
         // Here we name the motors.
-        motorLeft  = hwMap.get(DcMotor.class, "motor_l");
+        motorLeft  = hwMap.get(DcMotor.class, "motot_l");
         motorRight = hwMap.get(DcMotor.class, "motor_r");
 
         motorRight.setDirection(DcMotor.Direction.FORWARD);
@@ -33,6 +39,11 @@ public class week1Hardware {
         // Setting the motors to use encoders
         motorLeft.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         motorRight.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+
+
+        sensorColor = hwMap.get(ColorSensor.class, "sensorColor");
+
+        distSensor = hwMap.get(Rev2mDistanceSensor.class, "distanceSensor");
 
     }
 }
