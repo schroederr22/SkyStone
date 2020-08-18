@@ -1,0 +1,3 @@
+There are a few ways to do this. The way I opted to do it was to use a distance sensor to tell the distance the robot was away from the wall. Another option would have been just "yeeting" the robot into the wall, using it as a mechanical stop.
+Then, I used a color sensor to detect the colors.
+For backing up, we can use a combination of the encoders on the motors and the distance sensor to determine how far back we should go.
